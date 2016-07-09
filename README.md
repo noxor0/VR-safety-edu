@@ -1,15 +1,19 @@
 # VR-safety-edu
 VR Jam Hackathon
 
+## Purpose
+
+K-12 Real time fire drill simulation
+
 ## Team Members
 
 Our team is comprised of:
 
 - [@Azoni](https://github.com/azoni) - UWT Student (Charlton Smith)
-- [@vinhdesail](https://github.com/vinhdesail) - UWT Student (Vinh Vien)
-- [@BrunoCode](https://github.com/BrunoCode) - UWT Student (Luis Solis)
-- [@cinwan12](https://github.com/cinwan12) - UWT Student (Cindy Wang)
-- [@RhaydenX](https://github.com/RhaydenX) - UWT Student (Alex Lambert)
+- [@noxor0](https://github.com/noxor0) - UWT Student (Connor Something)
+- [@glahmann](https://github.com/glahmann) - UWT Student (Garrett Lahmann)
+- [@petachew](https://github.com/petachew) - UWT Student (Peter Chu)
+- [@cranet](https://github.com/cranet) - UWT Student (Todd Crane)
 
 ## Technologies
 
