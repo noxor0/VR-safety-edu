@@ -3,7 +3,7 @@ VR Jam Hackathon
 
 ## Purpose
 
-K-12 Real time fire drill simulation
+K-12 Real time fire drill simulation.
 
 ## Team Members
 
