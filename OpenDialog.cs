@@ -14,24 +14,20 @@ public class OpenDialog : MonoBehaviour {
         //"questions.txt" will most likely need to be changed to \\Assets\\questions.txt
         // or you can leave it in root folder.
         StreamReader sr = File.OpenText("questions.txt");
-        string line;
-        while ((line = sr.ReadLine()) != null) {
-            myIndex = line.Split(',');
-            }
-
+        myIndex = sr.Split(',');
         }
     //if you want to have a interlocking story (where nodes point back to each other)
     // then you gotta send do: the question - 1
     // so it goes back to the previous question (you do the wrong response twice, but
     // i dont want to make that better
     // @param the 'wave/round' of question the user is currently on
-	static string PromptUser(int theQuestion) {
+	static string PromptUser(int theQuestionLevel) {
         //the value will change depending on the selection. 
-        string currQuestion = myIndex[(theQuestion * 3) + 0];
+        string currQuestion = myIndex[(theQuestionLevel * 3) + 0];
         //good response is going to return true
-        string currOption1 = myIndex[(theQuestion * 3) + 1];
+        string currOption1 = myIndex[(theQuestionLevel * 3) + 1];
         //bad response is going to return false
-        string currOption2 = myIndex[(theQuestion * 3) + 2];
+        string currOption2 = myIndex[(theQuestionLevel * 3) + 2];
         //Display shit
         bool isCorrect = EditorUtility.DisplayDialog("Make the choice!", currQuestion, currOption1, currOption2);
         //translate back to text
@@ -41,7 +37,7 @@ public class OpenDialog : MonoBehaviour {
         } else {
             returnStr = currOption2;
         }
-        myStringBuilder.Append(returnStr);
+        myStringBuilder.Append(returnStr + '\n');
         return returnStr;
     }
     //Show the path that the student took (log)
