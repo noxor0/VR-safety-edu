@@ -9,31 +9,33 @@ public class Timer : MonoBehaviour {
     public float seconds, minutes;
 	private int question_num;
 	private static float my_height = 0;
+
     // Use this for initialization
-    void Start () {
+    void Start() {
         counterText = GetComponent<Text>() as Text;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update() {
+
 		if (my_height < 0.5) { 
 			my_height = (float)Camera.main.gameObject.transform.position.y;
 		}
         minutes = (int)(Time.time / 60f);
         seconds = (int)(Time.time % 60f);
-		//Debug.Log("the players coordinates are " +  my_height);
         counterText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-		if (counterText.text.Equals("00:10") && ((float)Camera.main.gameObject.transform.position.y > (float)(0.5 * my_height)))
-        {
+		if (counterText.text.Equals("00:15")) {
             OpenDialog.PromptUser(0);
 		} 
-		if (counterText.text.Equals("00:30"))
-		{
+		if (counterText.text.Equals("00:25")) {
 			OpenDialog.PromptUser(1);
 		} 
-		if (counterText.text.Equals("01:00"))
-		{
+		if (counterText.text.Equals("00:35")) {
+            trigger.OnTriggerEnter();
 			OpenDialog.PromptUser(2);
 		} 
+        if (counterText.text.Equals("00:55")) {
+            OpenDialog.PromptUser(3);
+        }
 	}
 }

@@ -16,13 +16,12 @@ public class OpenDialog : MonoBehaviour{
     private static string selectedOption;
     private static bool isVisible = false;
 	// Use this for initialization
-	void Start () {
-       //yeah, we're hardcoding - whatever
-        string line = "I see smoke!,Start crawling,Stay standing and walk,What should I look for?, Fire Alarm, Backpack, Who should I look for?, Teacher, Friend";
+	void Start() {
+        string line = "I see smoke!,Start crawling,Stay standing and walk,What should I look for?, Fire Alarm, Bag, What else should I look for?, Door, My Friend";
         myIndex = line.Split(',');
     }
 
-    void OnGUI() {
+    public void OnGUI() {
         if (isVisible) {
             myWindowRect = GUI.Window(0, myWindowRect, DialogWindow, "What Should I do?");
         }
