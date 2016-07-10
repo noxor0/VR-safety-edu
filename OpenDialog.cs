@@ -19,11 +19,8 @@ public class OpenDialog : MonoBehaviour{
 	void Start () {
         //"questions.txt" will most likely need to be changed to \\Assets\\questions.txt
         // or you can leave it in root folder.
-        StreamReader sr = File.OpenText("questions.txt");
-        string line;
-        while ((line = sr.ReadLine()) != null) {
-             myIndex = line.Split(',');
-        }
+        string line = "I see smoke!,Start crawling,Stay standing and walk,What should I look for?, Fire Alarm, Backpack, Who should I look for?, Teacher, Friend";
+        myIndex = line.Split(',');
     }
 
     void OnGUI() {
@@ -59,6 +56,7 @@ public class OpenDialog : MonoBehaviour{
         myCurrOption2 = myIndex[(theQuestionLevel * 3) + 2];
         isVisible = true;
     }
+
     public static string getLastChoice() {
         return selectedOption;
     }
