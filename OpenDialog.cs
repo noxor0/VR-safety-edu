@@ -17,8 +17,7 @@ public class OpenDialog : MonoBehaviour{
     private static bool isVisible = false;
 	// Use this for initialization
 	void Start () {
-        //"questions.txt" will most likely need to be changed to \\Assets\\questions.txt
-        // or you can leave it in root folder.
+       //yeah, we're hardcoding - whatever
         string line = "I see smoke!,Start crawling,Stay standing and walk,What should I look for?, Fire Alarm, Backpack, Who should I look for?, Teacher, Friend";
         myIndex = line.Split(',');
     }
